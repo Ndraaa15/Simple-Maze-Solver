@@ -32,6 +32,11 @@ class Maze:
         # Display how the maze look
         print("Maze")
         Maze.display(maze)
+        print("Maze")
+        print("start  : ", start)
+        print("finish : ", finish)
+        print()
+
 
         # Looping through the queue
         while queue:
@@ -61,14 +66,16 @@ class Maze:
 
         print("No solution found")
 
+    # Private function to update the path
     def _update_path_(self, path):
         self.PATH = [[0 for _ in range(self.SIZE[1])] for _ in range(self.SIZE[0])]
         for row, col in path:
             self.PATH[row][col] = 1
             # Display the path using delay 1 second
-            time.sleep(1)
+            time.sleep(0.5)
             Maze.display(self.PATH)
 
+    # Private function to count the steps
     def _steps_(self, path):
         return len(path)
 

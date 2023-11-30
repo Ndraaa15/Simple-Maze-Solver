@@ -35,7 +35,7 @@ class Maze:
     def display(matrix):
         for r in matrix:
             for c in r:
-                print(c, end=" ")
+                print("." if c else "#", end=" ")
             print()
 
     # Private recursive function for solving the maze

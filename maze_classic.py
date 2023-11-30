@@ -51,7 +51,7 @@ class Maze:
             return True
         
         # Display the path using delay 1 second
-        time.sleep(1)
+        time.sleep(0.5)
         Maze.display(self.PATH)
 
         # Looping through the MOVE tuple and using recursive to find the solution

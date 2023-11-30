@@ -29,7 +29,11 @@ class Maze:
         self.steps = 1
         # Display how the maze look
         print("Maze")
+        print("start  : ", start)
+        print("finish : ", finish)
         Maze.display(maze)
+        print()
+
         # Run the maze (this function using recursive to find the solution)
         if self._run_(start_row, start_col):
             print(f"Solution (Total Steps: {self.steps})")
@@ -51,8 +55,8 @@ class Maze:
         if (row, col) == self.FINISH:
             return True
 
-        # Display the path using delay 1 second
-        time.sleep(1)
+        # Display the path using delay  second
+        time.sleep(0.5)
         Maze.display(self.PATH)
 
         # Looping through the MOVE tuple and using recursive to find the solution
